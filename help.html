@@ -1,1 +1,40 @@
 /*** Starts ***//
+/************** HIVE **********************/
+
+http://stackoverflow.com/questions/38670740/error-in-connecting-node-js-application-to-hive/39529926#39529926
+
+https://www.npmjs.com/package/jdbc
+
+/************* HIVE ENDS *****************/
+
+/********************************* Proxy solutions **********************//
+
+//*** commands  **/
+# git config --global http.proxy https://[corporate-proxy]
+# git config --global http.sslVerify false
+# npm config set cafile /path/to/cert.pem
+
+npm config set proxy http://proxy.company.com:8080
+npm config set https-proxy http://proxy.company.com:8080
+
+ Linux / OS X:
+# export npm_config_strict-ssl=false
+# npm install npm -g --ca=null
+# npm --version
+# unset npm_config_strict-ssl
+Linux / OS X END:
+
+///*** can try ***///
+# npm install npm -g --ca=null
+# npm config set ca=""
+//*** can try end ***//
+
+//************ commands end **********//
+
+//***** BLOGS START
+http://stackoverflow.com/questions/23788564/npm-add-root-ca
+https://github.com/npm/npm/issues/5789
+https://coderwall.com/p/c2njkg/fix-npm-self_signed_cert_in_chain-or-cert_untrusted-errors
+http://blog.npmjs.org/post/78085451721/npms-self-signed-certificate-is-no-more
+//****** BLOGS END
+/********************************* Proxy solutions END **********************//
