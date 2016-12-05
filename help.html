@@ -62,4 +62,14 @@ https://coderwall.com/p/c2njkg/fix-npm-self_signed_cert_in_chain-or-cert_untrust
 http://blog.npmjs.org/post/78085451721/npms-self-signed-certificate-is-no-more
 //****** BLOGS END ******//
 /********************************* Proxy solutions END **********************//
+/*******************NODE JS HIVE SPAWN functions START *************//
+const execFile = require('child_process').execFile;
+const child = execFile('mysql', ['--version'], (error, stdout, stderr) => {
+    if (error) {
+        console.error('stderr', stderr);
+        throw error;
+    }
+    console.log('stdout', stdout);
+});
+/******************NODE JS HIVE SPAWN FUNCTIONS END ****************//
 //**************************************************************** END ****************************************************************//
