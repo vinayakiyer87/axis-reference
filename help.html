@@ -63,6 +63,7 @@ http://blog.npmjs.org/post/78085451721/npms-self-signed-certificate-is-no-more
 //****** BLOGS END ******//
 /********************************* Proxy solutions END **********************//
 /*******************NODE JS HIVE SPAWN functions START *************//
+/****function1 start *****/
 const execFile = require('child_process').execFile;
 const child = execFile('mysql', ['--version'], (error, stdout, stderr) => {
     if (error) {
@@ -71,5 +72,38 @@ const child = execFile('mysql', ['--version'], (error, stdout, stderr) => {
     }
     console.log('stdout', stdout);
 });
+/// ******function1 end *****//
+
+/****function 2 start****/
+New file spawn.js
+
+
+~ vi spawn.js
+
+var child = require('child_process');
+var du = child.spawn('du', ['-sh', '/disk1']);
+du.stdout.on('data', function (data) {
+    console.log('stdout: ' + data);
+});
+du.stderr.on('data', function (data) {
+    console.log('stderr: ' + data);
+});
+du.on('exit', function (code) {
+    console.log('child process exited with code ' + code);
+});
+The result of running through the node
+
+
+~ node spawn.js
+
+stdout: 582M    /disk1
+child process exited with code 0
+/*********function 2 end********************/
+
+//********blog for spawn************////
+https://dzone.com/articles/understanding-execfile-spawn-exec-and-fork-in-node
+https://nodejs.org/api/child_process.html
+http://blog.fens.me/nodejs-child-process/
+//****blog for spawn end *********//
 /******************NODE JS HIVE SPAWN FUNCTIONS END ****************//
 //**************************************************************** END ****************************************************************//
