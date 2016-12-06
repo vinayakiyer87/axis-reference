@@ -1,0 +1,35 @@
+/***** LOGS FOR AXISGA *******/
+
+// Ran a custom push to ODS which was working.
+CREATE TABLE accga4 ( usertype varchar2(200), sessioncount varchar2(200), users varchar2(200), newsers varchar2(200) )
+
+select * from accga4;
+
+select count(*) from accga4; >> count on 6-12-2016(186 records)
+
+
+/// Set a custom schedule -- 1	internet_banking	ga:users,ga:newUsers	ga:userType,ga:sessionCount	11:05AM daily >>>
+QUERY(CREATE TABLE accgad1 ( usertype varchar2(200), sessioncount varchar2(200), users varchar2(200), newsers varchar2(200) )).. Ran this automatically twice 
+twice >> Data count on 6-12-2016"select count(*) from accgad1;" >> (2604 records) >>
+
+
+/// BQ >>> QUERY ADDED >>
+
+INSERT INTO BIGQUERY_tabletest ( a_ACC_NO ,  a_SOL_ID_INIT ,  a_SOL_ID_ACC ,  a_TXNID , a_PART_TRAN_TYPE ,  a_TXN_AMT ,  a_TXN_TYPE ,  a_RCRE_USERID ,  a_TRAN_TYPE ,  a_TRAN_SUB_TYPE ,  a_INSTR ,  a_ACID ,  a_TXN_PARTICULARS ,  a_TXN_REMARKS ,  a_TXN_REMARKS2 ,  a_TRAN_DATE ,  a_TRAN_SUB_TYPE_tag ,  b_new_CHANNEL ,  b_new_Tag ,  b_new_Sub_Tag )
+
+ 
+ CREATE TABLE BIGQUERY_tabletest ( a_ACC_NO varchar2(200),a_SOL_ID_INIT varchar2(200),a_SOL_ID_ACC varchar2(200),
+ a_TXNID varchar2(200),
+ a_PART_TRAN_TYPE varchar2(200),a_TXN_AMT varchar2(200),
+ a_TXN_TYPE varchar2(200),a_RCRE_USERID varchar2(200),a_TRAN_TYPE varchar2(200),a_TRAN_SUB_TYPE varchar2(200),
+ a_INSTR varchar2(200),a_ACID varchar2(200),a_TXN_PARTICULARS varchar2(200),a_TXN_REMARKS varchar2(200),a_TXN_REMARKS2 varchar2(200),
+ a_TRAN_DATE varchar2(200),a_TRAN_SUB_TYPE_tag varchar2(200),b_new_CHANNEL varchar2(200),b_new_Tag varchar2(200),b_new_Sub_Tag varchar2(200))
+
+select count(*) from BIGQUERY_tabletest;
+
+
+
+//*** BQ ERROR >>>
+######## EXISTING JOB ID UPDATED ########
+####### inside job status #############
+### Error In Listing 2 ########## Error: ENOENT: no such file or directory, open 'AxisGA.pem'  >>>>REMOVED THIS ERROR
