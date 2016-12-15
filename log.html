@@ -54,4 +54,17 @@ select count(*) from BIGQUERY_tabletest; >> need to check tomorrow morning
 9) select count(*) from accgad1; >>> (count = 366) on 9/12/2016 >>> need to monitored for 10th and 11th . 
 select count(*) from BIGQUERY_tabletest; >>( count = 0) on 9/12/2016 >> HIT 70 lacs limit data query
 
-/********************MY LOGS 9th DEC 2016 START ****************/
+/********************MY LOGS 9th DEC 2016 END ****************/
+
+/*************** MY LOGS 15th DEC 2016 START **********//
+
+1) CREATE TABLE MAR16_9CRORE_ACC (row1 varchar2(200), acid varchar2(200), monthid varchar2(200), MBTRANS varchar2(200), IBTRANS varchar2(200), BPTRANS varchar2(200), POSTRANS varchar2(200), ECSTRANS varchar2(200), SITRANS varchar2(200), REMITTRANS varchar2(200));
+
+2) select count(*) from MAR16_9CRORE_ACC; -- 7.53pm {Count==55217518} .. Total of 9 crores data to be pushed
+
+3) Installed nodejs on  Hive Server 10.0.66.241 with permission, ... Hive server has 
+Red Hat Enterprise Linux Server release 6.7 (Santiago) not CENTOS
+
+4) select count(*) from accgad1 >>> Count today 3624 >> should be more tomorrow....
+
+/*************** MY LOGS 15th DEC 2016 END **********//
