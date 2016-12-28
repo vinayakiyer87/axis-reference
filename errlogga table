@@ -1,0 +1,9 @@
+
+
+CREATE TABLE errlogga (
+     id int(11) NOT NULL AUTO_INCREMENT,
+     datetime varchar(50),
+	 message varchar(50),
+	 url varchar(50),
+     PRIMARY KEY (id)
+);
