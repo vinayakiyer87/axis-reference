@@ -7,3 +7,9 @@ CREATE TABLE errlogga (
 	 url varchar(50),
      PRIMARY KEY (id)
 );
+
+
+
+/**** JHOL ******/
+
+ rm -rf axis-source-code -- from /data2
