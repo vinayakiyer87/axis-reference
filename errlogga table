@@ -8,6 +8,12 @@ CREATE TABLE errlogga (
      PRIMARY KEY (id)
 );
 
+ALTER TABLE `errolog`
+  CHANGE COLUMN `message` `message` VARCHAR(10000);
+  
+  ALTER TABLE `errlogga`
+  CHANGE COLUMN `message` `message` VARCHAR(10000);
+
 
 
 /**** JHOL ******/
