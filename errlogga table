@@ -17,6 +17,9 @@ ALTER TABLE `errolog`
 ALTER TABLE `axis`.`bqschedules` 
 CHANGE COLUMN `bqjobId` `bqjobId` VARCHAR(99) NULL DEFAULT NULL AFTER `fail`;
 
+ALTER TABLE `axis`.`users` 
+ADD COLUMN `type` VARCHAR(45) NULL AFTER `email`;
+
 
 /**** JHOL ******/
 
