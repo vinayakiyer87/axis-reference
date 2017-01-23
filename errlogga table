@@ -21,6 +21,9 @@ ALTER TABLE `axis`.`users`
 ADD COLUMN `type` VARCHAR(45) NULL AFTER `email`;
 
 
+//bq query
+SELECT count(*) FROM [axis-bank-prod:mydataset.ABR_APR15_MAR16_ACCNTLVL]
+
 /**** JHOL ******/
 
  rm -rf axis-source-code -- from /data2
