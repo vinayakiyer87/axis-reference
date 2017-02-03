@@ -1,0 +1,26 @@
+INSERT INTO F_TXN_CA_SEP16 ( accno,	solidinit, solidacc, txnid,	parttrantype, txnamt, txntype, rcreuserid, trantype, transubtype, instr, acid, txnparticulars, txnremarks, txnremarks2,	trandate, transubtype_tag, new_channel,	b_newtag, b_newsubtag )
+
+
+create table F_TXN_CA_SEP16 (accno varchar2(500),
+	solidinit varchar2(500),	
+	solidacc varchar2(500),
+	txnid varchar2(500),	
+	parttrantype varchar2(500),
+	txnamt varchar2(500),	
+	txntype varchar2(500),
+	rcreuserid varchar2(500),	
+	trantype varchar2(500),
+	transubtype	varchar2(500), 
+	instr varchar2(500),	
+	acid varchar2(500),
+	txnparticulars varchar2(500),
+	txnremarks varchar2(500),	
+	txnremarks2 varchar2(500),
+	trandate varchar2(500),
+	transubtype_tag varchar2(500),
+	new_channel varchar2(500),
+	b_newtag varchar2(500),
+	b_newsubtag varchar2(500))
+
+	
+	
