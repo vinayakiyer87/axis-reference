@@ -19,4 +19,4 @@ from ODS_TRAN_DATA_CURR_DAY WHERE TRAN_DATE=TO_DATE('2017-02-04','YYYY-MM-DD')
 ***ONLY DATE IS DYNAMIC in THIS QUERY (from ODS_TRAN_DATA_CURR_DAY WHERE TRAN_DATE=TO_DATE(/////DYNAMIC START'2017-02-04'///////DYNAMICEND,'YYYY-MM-DD')
 
 *** ANother ODS Connection String 
-Connection Name - ODS_EXADATA , username- ods_user, password-   , host- 10.9.64.12, port-1521, Service Name - ODSPROD 
+Connection Name - ODSPROD , username- mis_user, password- abcd@1234  , host- 10.9.64.12, port-1521, Service Name - ODSPROD 
