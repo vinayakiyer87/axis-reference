@@ -27,3 +27,18 @@ SELECT count(*) FROM [axis-bank-prod:mydataset.ABR_APR15_MAR16_ACCNTLVL]
 /**** JHOL ******/
 
  rm -rf axis-source-code -- from /data2
+
+CREATE TABLE `axis`.`bqupload_schedule` (
+  `id` INT NULL AUTO_INCREMENT,
+  `ods_query` MEDIUMTEXT NULL,
+  `bigquery` MEDIUMTEXT NULL,
+  `bq_identifier` VARCHAR(500) NULL,
+  `big_datasetname` VARCHAR(500) NULL,
+  PRIMARY KEY (`id`));
+
+  
+  CREATE TABLE `axis`.`bqc_createtbl` (
+  `id` INT NULL AUTO_INCREMENT,
+  `name` VARCHAR(500) NULL,
+  `dummy_create` MEDIUMTEXT NULL,
+  PRIMARY KEY (`id`));
