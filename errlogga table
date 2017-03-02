@@ -28,17 +28,22 @@ SELECT count(*) FROM [axis-bank-prod:mydataset.ABR_APR15_MAR16_ACCNTLVL]
 
  rm -rf axis-source-code -- from /data2
 
-CREATE TABLE `axis`.`bqupload_schedule` (
+CREATE TABLE `axis`.`bquploadschedules` (
   `id` INT NULL AUTO_INCREMENT,
-  `ods_query` MEDIUMTEXT NULL,
-  `bigquery` MEDIUMTEXT NULL,
-  `bq_identifier` VARCHAR(500) NULL,
-  `big_datasetname` VARCHAR(500) NULL,
+  `odsquery` MEDIUMTEXT NULL,
+  `tempdataset` VARCHAR(200) NULL,
+  `bquerytag` MEDIUMTEXT NULL,
+  `type` VARCHAR(45) NULL,
+  `time` VARCHAR(45) NULL,
+  `bqtable` VARCHAR(45) NULL, 
+  `filename` VARCHAR(45) NULL, 
+  `status` VARCHAR(45) NULL,   
   PRIMARY KEY (`id`));
 
   
-  CREATE TABLE `axis`.`bqc_createtbl` (
+   CREATE TABLE `axis`.`bqcustomcreatetbl` (
   `id` INT NULL AUTO_INCREMENT,
-  `name` VARCHAR(500) NULL,
-  `dummy_create` MEDIUMTEXT NULL,
+  `create1` MEDIUMTEXT NULL,
+  `tempdataset` MEDIUMTEXT NULL,
+  `filename` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
