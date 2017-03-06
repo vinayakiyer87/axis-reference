@@ -503,6 +503,9 @@ on a.TRAN_SUB_TYPE_tag = b.SUB_TAG_OLD LIMIT 1
 
 
 
+bq mk --external_table_definition=ACID:string, TRAN_DATE:string, TRAN_ID:string, PART_TRAN_SRL_NUM:string, TRAN_SUB_TYPE:string, PART_TRAN_TYPE:string, TXN_PARTICULARS:string, TXN_REMARKS:string, INSTR:string, TXN_REMARKS_2:string, RCRE_USER_ID:string, TRAN_TYPE:string, TRAN_AMOUNT:string, SOL_ID_INIT:string, SOL_ID_ACC:string@CSV=gs://dummy-upload/odstran.csv.gz mydataset.ODS_TRAN_DATA_CURR_DAY	
+
+
 
 
 4/IcRhzj_z5r_5EYwHvugPK8IhlfjE3kO9S7St3wuSIm4
