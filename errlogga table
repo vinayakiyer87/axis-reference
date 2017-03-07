@@ -47,3 +47,9 @@ CREATE TABLE `axis`.`bquploadschedules` (
   `tempdataset` MEDIUMTEXT NULL,
   `filename` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
+  
+  
+  ***** column for connection string from dropdown
+  ALTER TABLE `axis`.`bquploadschedules` 
+ADD COLUMN `constring` VARCHAR(450) NULL DEFAULT NULL AFTER `status`;
+
