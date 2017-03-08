@@ -362,3 +362,12 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2016-10-24 17:22:25
+
+CREATE TABLE `errlogga` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `datetime` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `message` varchar(10000) DEFAULT NULL,
+  `url` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1272 DEFAULT CHARSET=latin1;
+
