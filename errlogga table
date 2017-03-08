@@ -53,3 +53,10 @@ CREATE TABLE `axis`.`bquploadschedules` (
   ALTER TABLE `axis`.`bquploadschedules` 
 ADD COLUMN `constring` VARCHAR(450) NULL DEFAULT NULL AFTER `status`;
 
+CREATE TABLE `errlogbqupload` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `datetime` varchar(50) CHARACTER SET utf8 DEFAULT NULL,
+  `message` varchar(10000) DEFAULT NULL,
+  `url` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1272 DEFAULT CHARSET=latin1;
