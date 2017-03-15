@@ -60,3 +60,8 @@ CREATE TABLE `errlogbqupload` (
   `url` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1272 DEFAULT CHARSET=latin1;
+
+
+//****** Altered table in mysql on 15/3/2017 *******
+ALTER TABLE `axis`.`bquploadschedules` 
+ADD COLUMN `failtime` VARCHAR(300) NULL DEFAULT NULL AFTER `constring`;
