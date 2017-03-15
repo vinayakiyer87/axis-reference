@@ -68,3 +68,7 @@ ADD COLUMN `failtime` VARCHAR(300) NULL DEFAULT NULL AFTER `constring`;
 
 ALTER TABLE `axis`.`bquploadschedules` 
 ADD COLUMN `daterange` VARCHAR(10) NULL AFTER `failtime`;
+
+ALTER TABLE `axis`.`bquploadschedules` 
+ADD COLUMN `failcounter` VARCHAR(45) NULL AFTER `daterange`;
+//****** Altered table in mysql on 15/3/2017 ENDSSSSSS *******
