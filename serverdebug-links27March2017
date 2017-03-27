@@ -1,0 +1,12 @@
+//no space for cron links start
+http://thedaneshproject.com/posts/no-space-left-on-device/
+http://www.linuxquestions.org/questions/linux-newbie-8/no-space-left-on-device-839492/page2.html  ..{this looks good}
+// no space for cron links end
+
+// df commands -
+df -h   //displays info which can be humanly readable 
+df -a  //displays info of all file systems
+df -h --total   //displays grand total in output
+df -i  //displays inodes
+df -t  //displays type of folder column
+
