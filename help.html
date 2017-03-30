@@ -39,6 +39,24 @@ Linux / OS X END:
 false
 produces:
 
+////********* 30 - 3 - 2017 changes start *****//
+ALTER TABLE `axis`.`bqschedules` 
+ADD COLUMN `failcounter` VARCHAR(45) NULL DEFAULT NULL AFTER `bqjobId`;
+
+
+create table test2 ( ACID varchar2(200), 
+MONTH_ID varchar2(200), 
+MB_TRANS varchar2(200), 
+IB_TRANS varchar2(200),
+BP_TRANS varchar2(200),
+POS_TRANS varchar2(200), 
+ECS_TRANS varchar2(200), 
+SI_TRANS varchar2(200),
+REMIT_TRANS varchar2(200))
+
+INSERT INTO test2 ( ACID, MONTH_ID, MB_TRANS, IB_TRANS, BP_TRANS, POS_TRANS, ECS_TRANS, SI_TRANS, REMIT_TRANS )
+//*** 30 - 3 - 2017 changes end *******//
+
 ...
 npm_config_strict_ssl: '',
 ...
