@@ -521,9 +521,29 @@ TRIM(SOL_ID_ACC) as Sol_Id_Acc
 from ODS_TRAN_DATA_CURR_DAY WHERE TRAN_DATE>=TO_DATE(' 2017-03-14 ','YYYY-MM-DD') and TRAN_DATE<TO_DATE(' 2017-03-15 ','YYYY-MM-DD')
 bq mk --external_table_definition=ACID:string, TRAN_DATE:string, TRAN_ID:string, PART_TRAN_SRL_NUM:string, TRAN_SUB_TYPE:string, PART_TRAN_TYPE:string, TXN_PARTICULARS:string, TXN_REMARKS:string, INSTR:string, TXN_REMARKS_2:string, RCRE_USER_ID:string, TRAN_TYPE:string, TRAN_AMOUNT:string, SOL_ID_INIT:string, SOL_ID_ACC:string@CSV=gs://dummy-upload/odstran.csv.gz mydataset.ODS_TRAN_DATA_CURR_DAY	
 
+Upload query:
 
+SELECT
+ACID,
+TO_CHAR(TRAN_DATE,'YYYY-MM-DD HH:MM:SS')  as TRAN_DATE,
+TRIM(TRAN_ID),
+TRIM(PART_TRAN_SRL_NUM),
+TRIM(TRAN_SUB_TYPE),
+TRIM(PART_TRAN_TYPE),
+'"' || REPLACE(TRIM(TRAN_PARTICULAR),'"','""') || '"'  as txn_particulars,
+'"' || REPLACE(TRIM(TRAN_RMKS),'"','""') || '"'  as txn_remarks,
+TRIM(INSTRMNT_NUM) as INSTR,
+'"' || REPLACE(TRIM(TRAN_RMKS_2),'"','""') || '"' as TXN_REMARKS_2,
+TRIM(RCRE_USER_ID) as RCRE_USER_ID,
+TRIM(TRAN_TYPE) as tran_type,
+TRIM(TRAN_AMT) as TRAN_AMOUNT,
+TRIM(SOL_ID_INIT) as SOL_ID_INIT,
+TRIM(SOL_ID_ACC) as Sol_Id_Acc
+from ODS_TRAN_DATA_CURR_DAY WHERE TRAN_DATE>=TO_DATE(' 2017-03-14 ','YYYY-MM-DD') and TRAN_DATE<TO_DATE(' 2017-03-15 ','YYYY-MM-DD')
 
+Download query:
 
-4/IcRhzj_z5r_5EYwHvugPK8IhlfjE3kO9S7St3wuSIm4
+Select * from mydataset.table_name where WHERE TRAN_DATE>='2016-12-25 00:00:00 UTC' and TRAN_DATE< '2016-12-26 00:00:00 UTC' 
 
+SELECT DISTINCT column1, column2, FROM table_name;
 
