@@ -72,3 +72,7 @@ ADD COLUMN `daterange` VARCHAR(10) NULL AFTER `failtime`;
 ALTER TABLE `axis`.`bquploadschedules` 
 ADD COLUMN `failcounter` VARCHAR(45) NULL AFTER `daterange`;
 //****** Altered table in mysql on 15/3/2017 ENDSSSSSS *******
+
+//*********
+
+a_ACID	,a_TRAN_DATE	,a_TRAN_ID	,a_PART_TRAN_SRL_NUM	,a_TRAN_SUB_TYPE	,a_PART_TRAN_TYPE	,a_TXN_PARTICULARS	,a_TXN_REMARKS	,a_INSTR	,a_TXN_REMARKS_2	,a_RCRE_USER_ID	,a_TRAN_TYPE	,a_TRAN_AMOUNT	,a_SOL_ID_INIT	,a_SOL_ID_ACC	,a_TRAN_SUB_TYPE_tag	,b_new_CHANNEL	,b_new_Tag	,b_new_Sub_Tag
