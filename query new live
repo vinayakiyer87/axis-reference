@@ -543,7 +543,10 @@ from ODS_TRAN_DATA_CURR_DAY WHERE TRAN_DATE>=TO_DATE(' 2017-03-14 ','YYYY-MM-DD'
 
 Download query:
 
-Select * from mydataset.table_name where WHERE TRAN_DATE>='2016-12-25 00:00:00 UTC' and TRAN_DATE< '2016-12-26 00:00:00 UTC' 
+Select * from mydataset.table_name WHERE a_TRAN_DATE>='2016-12-25 00:00:00 UTC' and a_TRAN_DATE< '2016-12-26 00:00:00 UTC' 
 
 SELECT DISTINCT column1, column2, FROM table_name;
 
+SELECT a_TRAN_DATE FROM [axis-bank-prod:mydataset.ods_tran_test] GROUP BY a_TRAN_DATE
+
+SELECT * FROM [axis-bank-prod:mydataset.ods_tran_test] WHERE a_TRAN_DATE>='2017-03-23' and a_TRAN_DATE< '2017-03-24'
